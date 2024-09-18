@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Club - Vibrant and Creative</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+        :root {
+            --color-1: #FF1493; /* Deep Pink */
+            --color-2: #FFD700; /* Gold */
+            --color-3: #FF4500; /* Orange Red */
+            --color-4: #32CD32; /* Lime Green */
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(45deg, var(--color-1), var(--color-3));
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 5vw;
+            margin-bottom: 20px;
+        }
+
+        .changing-text {
+            color: var(--color-2);
+            font-weight: bold;
+            transition: color 0.5s ease;
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 15px 0;
+            border-radius: 30px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 20px;
+        }
+
+        nav ul li a:hover {
+            background-color: var(--color-2);
+            color: black;
+            transform: scale(1.1);
+        }
+
+        section {
+            margin: 50px 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        section h2 {
+            color: var(--color-2);
+            border-bottom: 2px solid var(--color-2);
+            padding-bottom: 10px;
+        }
+
+        .gallery-images {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .gallery-images img {
+            width: 30%;
+            margin: 10px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-images img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+            border-radius: 15px;
+        }
+
+        .google-docs-links a {
+            color: var(--color-2);
+            margin: 0 10px;
+            text-decoration: none;
+            border-bottom: 1px solid var(--color-2);
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .google-docs-links a:hover {
+            background-color: var(--color-2);
+            color: black;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 8vw;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+            .gallery-images img {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><span class="changing-text">Art</span> Club</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Welcome to our Club! We are a vibrant community dedicated to exploring creativity through art, murals, and fundraising activities.</p>
+        </section>
+
+        <section id="events">
+            <h2>Upcoming Events</h2>
+            <ul>
+                <li>Community Mural Painting - Every First Saturday</li>
+                <li>Annual Art Exhibition & Fundraiser - September 15th</li>
+                <li>Workshop: Public Art and Fundraising - October 5th</li>
+            </ul>
+        </section>
+
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <p>Explore our colorful world of art and murals!</p>
+            <div class="gallery-images">
+                <img src="/api/placeholder/300/200" alt="Vibrant Artwork 1" />
+                <img src="/api/placeholder/300/200" alt="Colorful Mural 2" />
+                <img src="/api/placeholder/300/200" alt="Fundraising Event 3" />
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: hello@creativeclubs.com</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Address: 789 Creativity Avenue, Artville, AC 54321</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Creative Clubs. All rights reserved.</p>
+            <div class="google-docs-links">
+                <a href="https://docs.google.com/document/d/1C5_TnNal02mb5mD0DjemUlxexzJlHJjAc99EBJvj7wE/edit?usp=sharing" target="_blank">Club Constitution</a>
+                <a href="https://docs.google.com/document/d/your-document-id-2" target="_blank">Event Calendar</a>
+            </div>
+        </div>
+    </footer>
+
+      <script>
+          const words = ['Art', 'Mural', 'Fundraising'];
+          let currentIndex = 0;
+          const changingText = document.querySelector('.changing-text');
+          let colorIndex = 0;
+
+          function changeText() {
+              currentIndex = (currentIndex + 1) % words.length;
+              changingText.textContent = words[currentIndex];
+          }
+
+          function changeColor() {
+              // Create an RGB color that shifts over time
+              let r = Math.floor(Math.sin(colorIndex * 0.1) * 127 + 128);
+              let g = Math.floor(Math.sin(colorIndex * 0.1 + 2) * 127 + 128);
+              let b = Math.floor(Math.sin(colorIndex * 0.1 + 4) * 127 + 128);
+
+              changingText.style.color = `rgb(${r}, ${g}, ${b})`;
+
+              colorIndex++;
+          }
+
+          setInterval(changeText, 2000);  // Change text every 2 seconds
+          setInterval(changeColor, 50);   // Change color every 50m
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Scroll animation
+        const sections = document.querySelectorAll('section');
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
